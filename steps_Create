@@ -1,0 +1,15 @@
+docker run --name myjenkins -dit -p 8080:8080 -p 50000:50000 -v /Users/nicolascastaneda/Documents/Personal/jenkins:/var/lib/jenkins/ ubuntu
+apt update
+apt install openjdk-8-jdk -y
+apt install curl
+curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io.key | tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/ | tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+apt install git -y
+ssh-keygen
+apt update
+apt install jenkins -y
+apt install systemctl -y
+systemctl status jenkins
+service jenkins start
+service jenkins status
+cat /var/lib/jenkins/secrets/initialAdminPassword
