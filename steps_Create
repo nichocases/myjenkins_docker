@@ -15,4 +15,8 @@ apt install systemctl -y
 systemctl status jenkins
 service jenkins start
 service jenkins status
+
+###OBTENER LA CLAVE DE ADMIN
 cat /var/lib/jenkins/secrets/initialAdminPassword
+
+####ir en el navegador a localhost:8080 y utilizar la clave del paso anterior
