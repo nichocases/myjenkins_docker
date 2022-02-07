@@ -1,4 +1,7 @@
 docker run --name myjenkins -dit -p 8080:8080 -p 50000:50000 -v /Users/nicolascastaneda/Documents/Personal/jenkins:/var/lib/jenkins/ ubuntu
+
+
+#########DENTRO DEL CONTAINER
 apt update
 apt install openjdk-8-jdk -y
 apt install curl
